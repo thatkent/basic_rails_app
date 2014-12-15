@@ -23,6 +23,9 @@ Things you may want to cover:
 
 * ...
 
+* APP name : fast-beach-4115
+*  Link : https://dashboard.heroku.com/apps/fast-beach-4115/resources
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
