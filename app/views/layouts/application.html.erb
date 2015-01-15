@@ -11,6 +11,7 @@
   <ul class="nav nav-tabs">
     <li> <%= link_to "Bloccit", root_path %> </li>
     <li> <%= link_to "About", about_path %> </li>
+    <li> <%= link_to "Topics", topics_path %> </li>
 
     <div class="pull-right user-info">
            <% if current_user %>
@@ -24,22 +25,22 @@
 </ul>
 
 <% if flash[:flash] %>
-<div class="alert alert-success">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <%= flash[:notice] %>
+  <div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <%= flash[:notice] %>
 
-</div>
+  </div>
 <%elsif flash[:error] %>
-<div class="alert alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <%= flash[:notice] %>
-</div>
+  <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <%= flash[:notice] %>
+  </div>
 
 <% elsif flash[:alert] %>
-<div class="alert alert-warning">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <%= flash[:alert] %>
-</div>
+  <div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <%= flash[:alert] %>
+  </div>
 
 <%end%>
 
