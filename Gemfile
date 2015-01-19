@@ -60,3 +60,5 @@ gem 'pundit'
 gem 'simple_form'
 
 gem 'redcarpet'
+
+gem 'will_paginate','~> 3.0.5'
