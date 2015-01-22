@@ -1,0 +1,4 @@
+<%= form_for [topic, post, post.comments.new] do |f| %>
+<%= f.text_field :body, label: "What are your thoughts?", placeholder: "Add comment" %>
+<%= f.submit "Add comment", class: 'btn btn-success' %>
+<% end %>
