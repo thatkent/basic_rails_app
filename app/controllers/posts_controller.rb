@@ -32,6 +32,12 @@ class PostsController < ApplicationController
     end
   end
 
+  # def upvote
+  #   @topic = Topic.find(params[:topic_id])
+  #   @post = Post.find(params[:id])
+  #   @post.upvote_by current_user
+  #   redirect_to [@topic, @post]
+
 
   def edit
     @topic = Topic.find(params[:topic_id])

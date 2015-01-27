@@ -62,3 +62,9 @@ gem 'pundit'
 gem 'redcarpet'
 
 gem 'will_paginate','~> 3.0.5'
+
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
+
+gem 'acts_as_votable'
