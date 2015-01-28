@@ -11,6 +11,19 @@ class Post < ActiveRecord::Base
    validates :topic, presence: true
    validates :user, presence: true
 
+   def up_votes
+    votes.where(value: 1).count
+  end
+
+  def down_votes
+    votes.where(value: -1).count
+  end
+
+  def points
+    votes.sum(:value).to_i
+  end
+
+
    # acts_as_votable
 
 end
