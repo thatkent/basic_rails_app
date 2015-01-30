@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
     belongs_to :topic
 
-  default_scope {order ('created_at DESC')}
+  default_scope {order ('rank DESC')}
 
   validates :title, length: { minimum: 5 }, presence: true
    validates :body, length: { minimum: 20 }, presence: true
@@ -21,6 +21,13 @@ class Post < ActiveRecord::Base
 
   def points
     votes.sum(:value).to_i
+  end
+
+  def update_rank
+    age_in_days = (created_at - Time.new(1970,1,1)) / (60 * 60 * 24)
+    new_rank = points + age_in_days
+
+    update_attribute(:rank, new_rank)
   end
 
 
