@@ -7,6 +7,11 @@
       <div class="media-body">
         <h4 class="media-heading">
           <%= link_to topic.name, topic %>
+          <small>
+            <% if policy(topic).destroy? %>
+              | <%= link_to "Delete", topic, method: :delete, data: {confirm: 'Are you sure you want to delete this'} %>
+            <% end %>
+          </small>
         </h4>
         <small>
           <%= topic.description %>
