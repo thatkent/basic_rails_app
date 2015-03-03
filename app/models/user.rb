@@ -18,6 +18,14 @@ class User < ActiveRecord::Base
     favorites.where(post_id: post.id).first
   end
 
+  def voted(post)
+  if vote = votes.where(post: post).take
+    vote
+  else
+    nil
+  end
+end 
+
 
   def moderator?
     role == 'moderator'
