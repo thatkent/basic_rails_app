@@ -32,7 +32,7 @@ class Post < ActiveRecord::Base
     update_attribute(:rank, new_rank)
   end
 
-  
+  scope :visible_to, -> (user) {user ? all : where(public: true)}
 
   private
 

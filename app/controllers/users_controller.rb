@@ -10,6 +10,11 @@ class UsersController < ApplicationController
        redirect_to edit_user_registration_path
      end
    end
+
+  def index
+    @users = User.top_rated.paginate(page: params[:page], per_page: 10)
+  end
+
  
    private
  
