@@ -70,3 +70,9 @@ end
 gem 'acts_as_votable'
 
 gem 'newrelic_rpm'
+
+gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'fog'
